@@ -29,7 +29,15 @@ export default function Devit({
             </Link>
           </header>
           <p>{content}</p>
-          {image && <Image src={image} alt={userName} />}
+          {image && (
+            <Image
+              loader={() => image}
+              src={image}
+              alt={userName}
+              width={100}
+              height={100}
+            />
+          )}
         </div>
       </article>
       <style jsx>{`

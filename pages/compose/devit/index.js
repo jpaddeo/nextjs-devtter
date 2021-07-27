@@ -104,7 +104,13 @@ export default function ComposeDevit() {
           {imageURL && (
             <section className='remove-img'>
               <button onClick={() => setImageURL(null)}>X</button>
-              <Image src={imageURL} alt={user?.username} />
+              <Image
+                loader={() => imageURL}
+                src={imageURL}
+                alt={user?.username}
+                width={36}
+                height={36}
+              />
             </section>
           )}
           <div>
