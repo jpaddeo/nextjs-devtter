@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 import Button from '../../../components/Button';
 import Avatar from '../../../components/Avatar';
@@ -103,7 +104,7 @@ export default function ComposeDevit() {
           {imageURL && (
             <section className='remove-img'>
               <button onClick={() => setImageURL(null)}>X</button>
-              <img src={imageURL} />
+              <Image src={imageURL} alt={user?.username} />
             </section>
           )}
           <div>

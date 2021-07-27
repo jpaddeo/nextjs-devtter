@@ -1,6 +1,6 @@
 import { firestore } from '../../../firebase/admin';
 
-export default (req, res) => {
+const devitShow = (req, res) => {
   const { query } = req;
   const { id } = query;
 
@@ -22,3 +22,4 @@ export default (req, res) => {
       res.status(404).end();
     });
 };
+export default devitShow;

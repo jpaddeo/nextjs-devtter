@@ -9,6 +9,7 @@ export default function DevitPage(props) {
   );
 }
 
+/*
 export async function getStaticPaths() {
   return {
     paths: [{ params: { id: 'Rsgm5xaD1EQU7TVXvaRi' } }],
@@ -26,8 +27,7 @@ export async function getStaticProps(context) {
     return { props: props };
   }
 }
-
-/*
+*/
 export async function getServerSideProps(context) {
   const { params, res } = context; // params, req, res, query
   const { id } = params;
@@ -43,6 +43,7 @@ export async function getServerSideProps(context) {
   }
 }
 
+/*
 DevitPage.getInitialProps = (context) => {
   const { query, res } = context;
   const { id } = query;

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import Avatar from '../Avatar';
 import useTimeAgo from '../../hooks/useTimeAgo';
@@ -28,7 +29,7 @@ export default function Devit({
             </Link>
           </header>
           <p>{content}</p>
-          {image && <img src={image} />}
+          {image && <Image src={image} alt={userName} />}
         </div>
       </article>
       <style jsx>{`

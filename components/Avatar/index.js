@@ -1,7 +1,9 @@
+import Image from 'next/image';
+
 export default function Avatar({ src, alt, text }) {
   return (
     <>
-      <img className='avatar' src={src} alt={alt} />
+      <Image className='avatar' src={src} alt={alt} />
       {text && <strong>{text}</strong>}
       <style jsx>{`
         .avatar {
